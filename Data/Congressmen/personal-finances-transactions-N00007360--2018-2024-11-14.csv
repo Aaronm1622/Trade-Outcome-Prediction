@@ -1,0 +1,37 @@
+orgname,ultorg,action,date1,transnotes,minvalue,maxvalue
+Amazon.com,"",Sold,Jul 27 2018 12:00AM,"","",""
+Amazon.com,"",Sold,Oct 12 2018 12:00AM,"","",""
+Amazon.com,"",Purchased,7/27/2018,"",500001,1000000
+Amazon.com,"",Purchased,10/12/2018,"",1000001,5000000
+Amazon.com,"",Purchased,7/27/2018,"",500001,1000000
+Amazon.com,"",Purchased,10/12/2018,"",1000001,5000000
+Apple Inc,"",Purchased,9/11/2018,"",500001,1000000
+Apple Inc,"",Purchased,9/20/2018,"",500001,1000000
+Apple Inc,"",Purchased,9/20/2018,"",500001,1000000
+Apple Inc,"",Purchased,2/2/2018,"",100001,250000
+Apple Inc,"",Purchased,2/2/2018,"",100001,250000
+Apple Inc,"",Purchased,9/11/2018,"",500001,1000000
+Apple Inc,"",Purchased,9/20/2018,"",500001,1000000
+Apple Inc,"",Purchased,9/20/2018,"",500001,1000000
+Apple Inc,"",Purchased,2/2/2018,"",100001,250000
+Apple Inc,"",Purchased,2/2/2018,"",100001,250000
+Apple Inc,"",Sold,Sep 11 2018 12:00AM,"","",""
+Apple Inc,"",Sold,Sep 20 2018 12:00AM,"","",""
+Apple Inc,"",Sold,Sep 20 2018 12:00AM,"","",""
+Apple Inc,"",Sold,Feb  2 2018 12:00AM,"","",""
+Apple Inc,"",Sold,Feb  2 2018 12:00AM,"","",""
+AT&T Inc,"",Sold,Oct 24 2018 12:00AM,"","",""
+AT&T Inc,"",Purchased,10/24/2018,"",250001,500000
+AT&T Inc,"",Purchased,10/24/2018,"",250001,500000
+Dropbox Inc,"",Purchased,3/27/2018,"",250001,500000
+Dropbox Inc,"",Purchased,3/27/2018,"",250001,500000
+Dropbox Inc,"",Sold,Mar 27 2018 12:00AM,"","",""
+Facebook Inc,"",Sold,Oct  9 2018 12:00AM,"","",""
+Facebook Inc,"",Purchased,10/9/2018,"",100001,250000
+Facebook Inc,"",Sold,Jul 27 2018 12:00AM,"","",""
+Facebook Inc,"",Purchased,7/27/2018,"",50001,100000
+Facebook Inc,"",Purchased,10/9/2018,"",100001,250000
+Facebook Inc,"",Purchased,7/27/2018,"",50001,100000
+Mojo Networks,"",Sold,8/23/2018,"",1001,15000
+Mojo Networks,"",Sold,8/23/2018,"",1001,15000
+Mojo Networks,"",Exchanged,Aug 23 2018 12:00AM,"","",""
