@@ -1,0 +1,2 @@
+baseline_train_accuracy,baseline_test_accuracy,rf_train_accuracy,rf_test_accuracy,xgb_train_accuracy,xgb_test_accuracy,timestamp,n_samples,n_features
+0.5734149054505006,0.5733333333333334,0.9276974416017798,0.6355555555555555,0.7997775305895439,0.6355555555555555,2024-12-08 15:58:33,2248,10

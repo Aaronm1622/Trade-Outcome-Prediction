@@ -1,0 +1,11 @@
+feature,importance
+party_x_chamber,0.13394506
+trade_size,0.115982026
+momentum_7d,0.1151535
+state_code,0.10623562
+state_x_is_purchase,0.10492993
+momentum_7d_x_trade_size,0.10218022
+chamber_code,0.08978269
+party_code,0.08763916
+trade_size_x_is_purchase,0.07882032
+is_purchase,0.06533149
