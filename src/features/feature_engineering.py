@@ -25,7 +25,7 @@ class FeatureEngineer:
         # Impute missing 'trade_size' with median
         if 'trade_size' in processed_df.columns:
             median_trade_size = processed_df['trade_size'].median()
-            processed_df['trade_size'].fillna(median_trade_size, inplace=True)
+            processed_df['trade_size'] = processed_df['trade_size'].fillna(median_trade_size)
             logging.info(f"Imputed missing 'trade_size' values with median: {median_trade_size}")
         
         logging.info("\nFeature Creation Summary:")
@@ -38,19 +38,22 @@ class FeatureEngineer:
     @staticmethod
     def _process_trade_size(trade_size_str):
         """
-        Convert 'Trade_Size_USD' string to numerical midpoint.
-        Examples:
-            '$1,001 - $15,000' -> 8000.5
-            '$15,001 - $50,000' -> 32500.5
-            '$50,001+' -> 50001  # or another logic for open-ended ranges
+        Convert 'Trade_Size_USD' string or numeric to numerical midpoint.
         """
         if pd.isna(trade_size_str):
             return np.nan
         
-        # Remove dollar signs and commas
+        # If the input is already numeric, return it directly
+        try:
+            trade_size_float = float(trade_size_str)
+            return trade_size_float
+        except ValueError:
+            pass  # Continue processing if it's not a numeric value
+
+        # Remove dollar signs and commas for ranges
         trade_size_str = trade_size_str.replace('$', '').replace(',', '')
         
-        # Use regex to extract numbers
+        # Use regex to extract ranges
         range_match = re.match(r'(\d+)\s*-\s*(\d+)', trade_size_str)
         if range_match:
             lower = float(range_match.group(1))
@@ -62,15 +65,13 @@ class FeatureEngineer:
             open_ended_match = re.match(r'(\d+)\+', trade_size_str)
             if open_ended_match:
                 lower = float(open_ended_match.group(1))
-                # Define a logic for upper bound, e.g., assume a certain multiplier
-                # Here, we'll add a fixed amount, say $50,000
-                upper = lower + 50000
+                upper = lower + 50000  # Add a fixed value for open-ended ranges
                 midpoint = (lower + upper) / 2
                 return midpoint
-            else:
-                # If format is unexpected, log a warning and return NaN
-                logging.warning(f"Unexpected trade size format: '{trade_size_str}'. Setting as NaN.")
-                return np.nan
+
+        # If format is unexpected, return NaN
+        logging.warning(f"Unexpected trade size format: '{trade_size_str}'. Setting as NaN.")
+        return np.nan
     
     @staticmethod
     def create_market_features(df, stock_data, lookback_days=7):
