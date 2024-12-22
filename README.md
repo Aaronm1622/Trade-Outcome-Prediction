@@ -1,1 +1,1 @@
-# Trade-Outcome-Prediction
+The primary objective of this project was to develop a predictive model that accurately forecasts the outcomes of congressional trades by determining whether each trade is profitable or unprofitable. Through analyzing historical trading data and incorporating various features the goal was to build a model that can assist in making informed trading decisions, potentially outperforming established benchmarks like the SPY (SPDR S&P 500 ETF Trust).
